@@ -8,12 +8,18 @@ const app = express();
 // body parser, json, and express static ('server/public')
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static('server/public'));
+app.use(express.static('public'));
 
 // Calculate the Math for the client side
 
 // POST an Array for solving?
 
 // Send back or get back history of uses
+app.get('/hello', (req, res) => {
+  res.send('Hello!');
+});
 
 // I need to get the PORT listening
+app.listen(PORT, function () {
+  console.log('We Calculating', PORT);
+});
