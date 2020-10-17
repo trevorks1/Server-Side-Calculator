@@ -6,7 +6,7 @@ const PORT = 5000;
 const app = express();
 const history = [];
 
-// body parser, json, and express static ('server/public')
+// body parser, json, and express static ('public')
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
