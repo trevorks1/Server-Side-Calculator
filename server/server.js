@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-// my port to 5000 for server side work
+// my port to 5000 for server side work, create server
 const PORT = 5000;
 const app = express();
 
@@ -21,5 +21,5 @@ app.get('/hello', (req, res) => {
 
 // I need to get the PORT listening
 app.listen(PORT, function () {
-  console.log('We Calculating', PORT);
+  console.log('Server is Running', PORT);
 });
