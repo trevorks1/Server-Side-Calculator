@@ -28,6 +28,11 @@ app.get('/hello', (req, res) => {
 app.post('/calculate', (req, res) => {
   // calculating equations
   const mathReady = req.body;
+  // {
+  // "input1": integer,
+  // "input2": integer,
+  // "operator": " "
+  // }
 
   // completedMath that was solved
   const completedMath = doMath(mathReady);
