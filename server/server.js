@@ -14,7 +14,9 @@ app.use(express.static('public'));
 // function to calculate equations
 function doMath(calculation) {
   // run each equation
+
   // passing the equation to the POST
+  return calculations;
 }
 
 // Send back or get back history of uses
@@ -32,6 +34,7 @@ app.post('/calculate', (req, res) => {
 
   // calculations stored in history
   history.push(completedMath);
+  console.log(history);
 
   // checking for the Created
   res.sendStatus(201);
