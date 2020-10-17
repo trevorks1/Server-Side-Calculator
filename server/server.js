@@ -14,13 +14,27 @@ app.use(express.static('public'));
 // function to calculate equations
 function doMath(calculations) {
   // run each equation
+  let total;
+
+  if (calculations.operator === '+') {
+    total = calculations.input1 + calculations.input2;
+  } else if (calculations.operator === '-') {
+    total = calculations.input1 - calculations.input2;
+  } else if (calculations.operator === '*') {
+    total = calculations.input1 * calculations.input2;
+  } else if (calculations.operator === '/') {
+    total = calculations.input1 / calculations.input2;
+  }
+
+  // defining total for calculations
+  calculations.total = total;
 
   // passing the equation to the POST
   return calculations;
 }
 
 // Send back or get back history of uses
-app.get('/hello', (req, res) => {
+app.get('/calculate', (req, res) => {
   res.send(history);
 });
 
