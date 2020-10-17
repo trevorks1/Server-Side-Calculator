@@ -10,9 +10,18 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-// Calculate the Math for the client side
+// function to calculate equations
+function doMath(calculation) {
+  // run each equation
+  // passing the equation to the POST
+}
 
-// POST an Array for solving?
+// POST the equation to the server
+app.post('/calculate', (req, res) => {
+  // calculating equations
+  // calculations stored in history
+  // checking for the Created
+});
 
 // Send back or get back history of uses
 app.get('/hello', (req, res) => {
@@ -21,5 +30,5 @@ app.get('/hello', (req, res) => {
 
 // I need to get the PORT listening
 app.listen(PORT, function () {
-  console.log('Server is Running', PORT);
+  console.log(`Listening on port: ${PORT}`);
 });
