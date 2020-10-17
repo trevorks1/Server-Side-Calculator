@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 // function to calculate equations
-function doMath(calculation) {
+function doMath(calculations) {
   // run each equation
 
   // passing the equation to the POST
