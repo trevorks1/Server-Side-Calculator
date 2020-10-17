@@ -14,25 +14,35 @@
       <h1>Try The Calculator</h1>
     </header>
 
-    <main class="js-calculations-main">
+    <form class="js-calculations-form">
       <!--input field 1-->
-      <input type="number" placeholder="Enter Number Here" class="js-input1" />
+      <input
+        type="number"
+        placeholder="Enter Number Here"
+        class="js-input1"
+        required
+      />
       <!--buttons to calculate-->
-      <button type="button" class="js-btn-plus">+</button>
-      <button type="button" class="js-btn-minus">-</button>
-      <button type="button" class="js-btn-multiply">*</button>
-      <button type="button" class="js-btn-division">/</button>
+      <button type="button" class="js-btn-op" data-op="+">+</button>
+      <button type="button" class="js-btn-op" data-op="-">-</button>
+      <button type="button" class="js-btn-op" data-op="*">*</button>
+      <button type="button" class="js-btn-op" data-op="/">/</button>
       <!--input field 2-->
-      <input type="number" placeholder="Enter Number Here" class="js-input2" />
+      <input
+        type="number"
+        placeholder="Enter Number Here"
+        class="js-input2"
+        required
+      />
       <!--buttons to = and Clear-->
       <button class="js-btn-equal">=</button>
       <button type="button" class="js-btn-clear">C</button>
+    </form>
+    <!--showing my entries-->
+    <h1 class="js-total-">0</h1>
 
-      <h1 class="js-total-">0</h1>
-
-      <ul class="js-history">
-        <li>7 - 8 = -1</li>
-      </ul>
-    </main>
+    <ul class="js-history">
+      <li></li>
+    </ul>
   </body>
 </html>

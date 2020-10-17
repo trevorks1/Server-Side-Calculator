@@ -33,11 +33,6 @@ function doMath(calculations) {
   return calculations;
 }
 
-// Send back or get back history of uses
-app.get('/calculate', (req, res) => {
-  res.send(history);
-});
-
 // POST the equation to the server
 app.post('/calculate', (req, res) => {
   // calculating equations
@@ -45,7 +40,7 @@ app.post('/calculate', (req, res) => {
   // {
   // "input1": integer,
   // "input2": integer,
-  // "operator": " "
+  // "operator": null,
   // }
 
   // completedMath that was solved
@@ -57,6 +52,11 @@ app.post('/calculate', (req, res) => {
 
   // checking for the Created
   res.sendStatus(201);
+});
+
+// Send back or get back history of uses
+app.get('/hello', (req, res) => {
+  res.send(history);
 });
 
 // I need to get the PORT listening
