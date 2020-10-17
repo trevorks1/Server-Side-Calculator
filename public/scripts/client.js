@@ -10,10 +10,9 @@ const equationObject = {
 
 // event listener
 function readyNow() {
-  console.log('jquery loaded');
   // event listeners
   $('.js-btn-op').on('click', clickBtnOperator);
-  $('.js-calculations-form').on('calculation', calculationOutputs);
+  $('.js-btn-submit').on('submit', calculationOutputs);
   $('.js-btn-clear').on('click', inputClear);
 
   getUserHistory();
@@ -27,11 +26,12 @@ function inputClear() {
 
 // creating a base for all my clicks with the data op
 function clickBtnOperator() {
-  console.log('Quick Maths');
+  console.log('Math is Good!');
   equationObject.operator = $(this).data('op');
 }
 
-function calculationOutputs() {
+// display the input and preventing 0 from being default
+function calculationOutputs(event) {
   event.preventDefault();
 
   equationObject.input1 = $('.js-input1').val();
@@ -77,9 +77,9 @@ function render(history) {
   }
 
   $('.js-history').empty();
-  for (let calculations of history) {
+  for (let equation of history) {
     $('.js-history').append(
-      `<li>${calculations.input1} ${calculations.operator} ${calculations.input2} = ${calculations.total}</li>`
+      `<li>${equation.input1} ${equation.operator} ${equation.input2} = ${equation.total}</li>`
     );
   }
 }

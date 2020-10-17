@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Try My Calculator</title>
+
     <link rel="stylesheet" href="styles/style.css" />
 
     <script type="text/javascript" src="vendors/jquery.min.js"></script>
     <script text="text/javascript" src="scripts/client.js"></script>
+
+    <title>Try My Calculator</title>
   </head>
   <body>
-    <header>
-      <h1>Try The Calculator</h1>
-    </header>
+    <h1 class="header">Try The Calculator</h1>
 
     <form class="js-calculations-form">
       <!--input field 1-->
@@ -35,14 +35,14 @@
         required
       />
       <!--buttons to = and Clear-->
-      <button class="js-btn-equal">=</button>
+      <button class="js-btn-submit">=</button>
       <button type="button" class="js-btn-clear">C</button>
     </form>
     <!--showing my entries-->
-    <h1 class="js-total-">0</h1>
+    <h1 class="js-total">0</h1>
 
     <ul class="js-history">
-      <li></li>
+      <li>8 - 7 = -1</li>
     </ul>
   </body>
 </html>

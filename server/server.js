@@ -61,5 +61,5 @@ app.get('/hello', (req, res) => {
 
 // I need to get the PORT listening
 app.listen(PORT, function () {
-  console.log(`Listening on port: ${PORT}`);
+  console.log('Listening to PORT', PORT);
 });
