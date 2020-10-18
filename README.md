@@ -30,4 +30,13 @@ To see the full version of this App: N/A
 5. You can then use C button to clear the fields.
 6. History will display under Result.
 
+## Built With
+
+Postman, AJAX, Express, Node, NPM, JS, HTML, CSS, and VSCode
+
+## Acknowledgement
+
+Thanks to Prime Digital Academy who equipped and helped me to make this app a reality.
+Special Thanks to Scott Bromander and Myron Schippers.
+
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
