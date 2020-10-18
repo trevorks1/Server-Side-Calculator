@@ -61,7 +61,7 @@ function postCalculations() {
 
 // History of inputs
 function getUserHistory() {
-  console.log('Am I really getting stuff?');
+  console.log('User History Works!');
   $.ajax({
     type: 'GET',
     url: '/hello',
