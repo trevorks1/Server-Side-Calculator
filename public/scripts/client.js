@@ -5,14 +5,16 @@ $(document).ready(readyNow);
 const equationObject = {
   input1: 0,
   input2: 0,
-  operator: '',
+  operator: null,
 };
 
 // event listener
 function readyNow() {
+  console.log('Is This Working?');
+
   // event listeners
   $('.js-btn-op').on('click', clickBtnOperator);
-  $('.js-btn-submit').on('submit', calculationOutputs);
+  $('.js-btn-submit').on('click', calculationOutputs);
   $('.js-btn-clear').on('click', inputClear);
 
   getUserHistory();
@@ -41,6 +43,7 @@ function calculationOutputs(event) {
   postCalculations();
 }
 
+// POST calculation to the client side
 function postCalculations() {
   $.ajax({
     type: 'POST',
@@ -56,6 +59,7 @@ function postCalculations() {
     });
 }
 
+// History of inputs
 function getUserHistory() {
   $.ajax({
     type: 'GET',
@@ -70,16 +74,19 @@ function getUserHistory() {
     });
 }
 
+// render history to display in line under my equation output
 function render(history) {
   console.log(history);
   if (history.length > 0) {
-    $('.js-total').text(history[history.length - 1].solution);
+    $('.js-total').text(history[history.length - 1].total);
   }
 
   $('.js-history').empty();
   for (let equation of history) {
     $('.js-history').append(
-      `<li>${equation.input1} ${equation.operator} ${equation.input2} = ${equation.total}</li>`
+      `<li>${equation.input1} ${equation.operator} ${
+        equation.input2
+      } = ${parseInt(equation.total)}</li>`
     );
   }
 }
