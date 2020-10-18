@@ -1,10 +1,6 @@
 # Server Side Calculator
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
-
 ## Description
-
-Your project description goes here. What problem did you solve? How did you solve it?
 
 #### On this project, I took care of working on a calculator on the server side of things.
 
