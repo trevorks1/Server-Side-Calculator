@@ -17,7 +17,7 @@ function doMath(equation) {
   let total;
 
   if (equation.operator === '+') {
-    total = equation.input1 + equation.input2;
+    total = Number(equation.input1) + Number(equation.input2);
   } else if (equation.operator === '-') {
     total = equation.input1 - equation.input2;
   } else if (equation.operator === '*') {
