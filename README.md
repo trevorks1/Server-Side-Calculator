@@ -15,4 +15,19 @@ Using that to call on my buttons and the functions that they did. Those buttons 
 Also having two other buttons that would submit those calculations and one to clear the field. Then i stored that data into a history of past calculations-
 and made it easy to display the result and the history on the page.
 
+## Duration:
+
+Three day weekend.
+
+To see the full version of this App: N/A
+
+## Usage
+
+1. Enter in input fields 1 and 2.
+2. Click either operator to calculate.
+3. Click the = or submit button to calculate.
+4. Result will display under input fields and button.
+5. You can then use C button to clear the fields.
+6. History will display under Result.
+
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
