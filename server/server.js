@@ -12,25 +12,25 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 // function to calculate equations
-function doMath(calculations) {
+function doMath(equation) {
   // run each equation
   let total;
 
-  if (calculations.operator === '+') {
-    total = calculations.input1 + calculations.input2;
-  } else if (calculations.operator === '-') {
-    total = calculations.input1 - calculations.input2;
-  } else if (calculations.operator === '*') {
-    total = calculations.input1 * calculations.input2;
-  } else if (calculations.operator === '/') {
-    total = calculations.input1 / calculations.input2;
+  if (equation.operator === '+') {
+    total = equation.input1 + equation.input2;
+  } else if (equation.operator === '-') {
+    total = equation.input1 - equation.input2;
+  } else if (equation.operator === '*') {
+    total = equation.input1 * equation.input2;
+  } else if (equation.operator === '/') {
+    total = equation.input1 / equation.input2;
   }
 
   // defining total for calculations
-  calculations.total = total;
+  equation.total = total;
 
   // passing the equation to the POST
-  return calculations;
+  return equation;
 }
 
 // POST the equation to the server
